@@ -19,4 +19,8 @@
 
 1. 使用的是 hash 路由,后续需要考虑是否换成 history 路由
 2. 是否要结合 monorepo 管理项目,主要好处是可以一键启动所有项目,但集成 monorepo + qiankun 有点重,可能也不是太必要
-3. 试验vite项目的js和css
+3. 试验 vite 项目的 js 和 css
+
+## 原作者 github 地址
+
+https://github.com/aehyok/vue-qiankun/blob/dev/docs/qiankun.md
