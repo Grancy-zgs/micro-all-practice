@@ -19,8 +19,8 @@
 
 1. 试验 vite 项目的 js 和 css
 2. 使用的是 hash 路由，后续需要考虑是否换成 history 路由
-3. 是否要结合 monorepo 管理项目，主要好处是可以一键启动所有项目，但集成 monorepo + qiankun 有点重, 可能也不是太必要
-4. 是否要将 common 中的内容转移到 monorepo 中
+3. 是否要将 common 中的内容转移到 monorepo 中（目前的 monorepo 仅单独管理公共组件库，不管理主应用和子应用）
+4. 是否要结合 monorepo 管理所有项目，主要好处是可以一键启动所有项目，但集成 monorepo + qiankun 有点重, 可能也不是太必要
 
 ## 原作者 github 地址
 
