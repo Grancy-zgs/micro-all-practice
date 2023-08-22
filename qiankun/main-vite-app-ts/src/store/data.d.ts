@@ -102,6 +102,31 @@ export function webpackList(): Menu[] {
   ]
 }
 
+export function vitePluginList(): Menu[] {
+  return [
+    {
+      id: 4,
+      title: 'home',
+      path: '/vite-test-plugin/home'
+    },
+    {
+      id: 1,
+      title: 'marker',
+      path: '/vite-test-plugin/marker'
+    },
+    {
+      id: 2,
+      title: 'polygon',
+      path: '/vite-test-plugin/polygon'
+    },
+    {
+      id: 3,
+      title: 'marker-polygon',
+      path: '/vite-test-plugin/marker-polygon'
+    }
+  ]
+}
+
 // 系统所有菜单列表
 export function getMenuList(): SystemMenu[] {
   console.log(webpackList(), 'webpackmenuList')
@@ -113,6 +138,10 @@ export function getMenuList(): SystemMenu[] {
     {
       Key: 'map-app',
       MenuList: mapList()
+    },
+    {
+      Key: 'vite-test-plugin',
+      MenuList: vitePluginList()
     }
   ]
 }

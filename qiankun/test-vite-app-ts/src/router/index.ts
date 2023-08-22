@@ -4,15 +4,15 @@ import pkg from "../../package.json"; // your micro app name (pkg.name)
 
 const microApp = getMicroApp(pkg.name);
 
-const routes = createRouter({
+const router = createRouter({
   history: createWebHistory(microApp.__POWERED_BY_QIANKUN__ ? pkg.name : "/"),
   routes: [
     {
       path: "/",
-      redirect: "/home",
+      redirect: "/vite-test-plugin/home",
     },
     {
-      path: "/home",
+      path: "/vite-test-plugin/home",
       name: "Home",
       component: () =>
         import(/* webpackChunkName: "home" */ "../components/HelloWorld.vue"),
@@ -23,4 +23,4 @@ const routes = createRouter({
   ],
 });
 
-export default routes;
+export default router;

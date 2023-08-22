@@ -1,27 +1,22 @@
-| 如果有问题尽量考虑使用 pnpm来安装依赖，本人已使用pnpm进行验证没问题的
+使用 pnpm 安装依赖
 
-##  [0、2021和2022年每天学习记录、周计划和月计划等](https://github.com/aehyok/2022)
+# 项目结构介绍
 
-## :heavy_check_mark: [1、qiankun微前端在vue3中的使用详细说明](https://github.com/aehyok/vue-qiankun/blob/dev/docs/qiankun.md)
+## 当前项目目录如下（暂时抛弃其他没有使用到的文件和文件夹）
 
-## :heavy_check_mark: [2、vue3 element-plus 动态form表单json配置使用说明](https://github.com/aehyok/vue-qiankun/blob/dev/docs/formconfig.md)
+    ├── common/                # 存放共用的工具库
+    ├── monorepo/              # 存放公共的组件库 使用monorepo进行管理
+    ├── main-vite-app-ts/      # 存放主应用 main-vite-app-ts 的文件夹
+    |── webpack-app/           # 存放微应用 webpack-app 的文件夹
+    |── map-app/               # 存放微应用 map-app 的文件夹
+    |—— test-vite-app-ts       # 存放vite微应用 使用vite-plugin-legacy-qiankun插件 资源加载有问题 还不能显示页面
+    |—— vite-test-plugin       # 存放vite微应用 使用vite-plugin-qiankun插件(比较主流 但未解决css沙箱和js沙箱问题) 已经可以显示页面了 但页面大小有些问题
+    |—— docs                   # 文档
+      |—— qiankun.conf           # 项目部署的nginx基础配置文件
+      |—— build.sh               # 通过脚本对主应用和子应用进行统一的打包
 
-## :heavy_check_mark: [3、vue3 element-plus 动态table列表json配置使用说明](https://github.com/aehyok/vue-qiankun/blob/dev/docs/tableconfig.md)
+## 还需解决的问题
 
-## :x: [4、vue3 leaflet  geoman地图打点和标绘功能实现(文档待补充)](https://github.com/aehyok/vue-qiankun/tree/dev/map-app)
-
-## :heavy_check_mark: [5、vue3 vant 动态list列表只需提供list项的模板，传入接口就可实现上拉加载和下拉刷新](https://github.com/aehyok/vue-qiankun/blob/dev/docs/vue3-vant3-list.md)
-
-##  :x: [6、vue3 vant 动态form表单json配置生成器(代码还待完善)](https://github.com/aehyok/vue-qiankun/blob/dev/vite-h5/src/components/form/index.vue)
-
-## :x: [7、vue3 element-plus 拖拽动态form表单json配置生成器(代码还待完善)](https://github.com/aehyok/vue-qiankun/blob/dev/webpapck-app/src/views/DynamicFormDesign.vue)
-
-## :x: [8、ak-vue3通用脚手架项目搭建（刚开了一个头）](https://github.com/aehyok/ak-vue3)
-
-##  :x: [9、taro3+vue3+typescript+nutui 微信小程序为主多端项目一套代码实现（代码待继续完善）](https://github.com/aehyok/taro-vue3-miniprogram)
-
-## :x: [10、通过脚本.sh编译前端项目，生成tag拷贝到nginx远程服务器等（待做版本回滚、jenkins docker已尝试）](https://github.com/aehyok/2021/blob/main/2021-08-07-dvs-build.sh)
-
-##  :heavy_check_mark:  [11、React+ umi + dva + Antd demo项目（待umi4开启升级）](https://github.com/aehyok/dotnet6.0/tree/main/react-antd-pro)
-
-
+1. 使用的是 hash 路由,后续需要考虑是否换成 history 路由
+2. 是否要结合 monorepo 管理项目,主要好处是可以一键启动所有项目,但集成 monorepo + qiankun 有点重,可能也不是太必要
+3. 试验vite项目的js和css
