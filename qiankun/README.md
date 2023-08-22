@@ -17,9 +17,10 @@
 
 ## 还需解决的问题
 
-1. 使用的是 hash 路由, 后续需要考虑是否换成 history 路由
-2. 是否要结合 monorepo 管理项目, 主要好处是可以一键启动所有项目,但集成 monorepo + qiankun 有点重, 可能也不是太必要
-3. 试验 vite 项目的 js 和 css
+1. 试验 vite 项目的 js 和 css
+2. 使用的是 hash 路由，后续需要考虑是否换成 history 路由
+3. 是否要结合 monorepo 管理项目，主要好处是可以一键启动所有项目，但集成 monorepo + qiankun 有点重, 可能也不是太必要
+4. 是否要将 common 中的内容转移到 monorepo 中
 
 ## 原作者 github 地址
 
