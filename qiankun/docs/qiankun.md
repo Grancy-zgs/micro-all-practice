@@ -1,18 +1,4 @@
 ## qiankun微前端在vue3中的使用详细说明
----
-> 注意分支为dev-qiankun 这个是初始化版本，初步上手难度较低，现在的dev版本是使用了pnpm monorepo,了解了以后也比较简单
-
-> 2022年 2月11日已升级到最新版本的依赖， npm i -g pnpm,然后用pnpm去操作
-
-> 大家好，我是aehyok🎋，一个住在深圳城市的佛系码农🧚🏻‍♀️，如果你喜欢我的文章📚，可以通过点赞帮我聚集灵力⭐️。
-
-> 个人github仓库地址： [https://github.com/aehyok](https://github.com/aehyok)
-
-> 本文讲解微前端qiankun demo仓库地址 ：  [https://github.com/aehyok/vue-qiankun](https://github.com/aehyok/vue-qiankun) 目前基于dev分支进行开发和测试
-
-> 本demo已部署腾讯云 [http://vue.tuokecat.com](http://vue.tuokecat.com)（服务器配置较低，如有访问比较慢，请耐心等待）
-
-微前端的讲解概念和理论的文章非常多，这里我就不谈了，我讲的肯定没有他们好。同样的github上的demo也非常多，然后我在公司项目引入时还是发现了许多问题，可能是时间太过于仓促，在github上clone下来的demo就真的是demo级别，根本谈不上应用。于是乎，我在公司微前端项目稳定了一段时间后，对qiankun乾坤微前端项目进行了简单的整理，特此发文进行记录，以及让更多入门的程序yuan们，在接触qiankun乾坤微前端框架时能够更快速的找到问题所在。
 
 ### 首先说一下，qiankun微前端在公司应用中解决了那些问题
 
@@ -124,7 +110,7 @@
     echo $current_path
 
     # 打印当前目录文件列表
-    # echo $a* 
+    # echo $a*
 
     #-----------------------------1、需要拉取的项目路径------------------
 
@@ -156,7 +142,7 @@
 
     #-------------------------4、 开始拷贝文件到服务器----------------------
     # /e/work/aehyok/github/qiankun 是我本地打包后的文件夹
-    scp -r /e/work/aehyok/github/qiankun/main root@139.186.205.7:/usr/local/qiankun/main/ 
+    scp -r /e/work/aehyok/github/qiankun/main root@139.186.205.7:/usr/local/qiankun/main/
 
 
     ######、拷贝完之后进行git 的提交
@@ -187,7 +173,7 @@
             server_name localhost;
             location / {
                 root  /usr/local/qiankun/main/;
-                index index.html; 
+                index index.html;
             }
         }
 
@@ -207,7 +193,7 @@
     ├── index.html            # 主应用的index.html
     ├── css/                  # 主应用的css文件夹
     ├── js/                   # 主应用的js文件夹
-    
+
     ```
 ----------------
 ### 后续迭代更新计划
@@ -247,8 +233,8 @@
     ├── @ffmpeg/ffmpeg         #  视频转码工具可通过wasm调用
     ├── swiper                 #  可实现很多效果的轮播图
     ├── vuex-persistedstate    #  针对vuex 进行缓存设置
-    ├── v-contextmenu          #  鼠标右键事件触发弹窗 
-    ├── jsoneditor             #  json阅读编辑器 
+    ├── v-contextmenu          #  鼠标右键事件触发弹窗
+    ├── jsoneditor             #  json阅读编辑器
     ├── ......后续慢慢写进来
 
  ---
@@ -264,17 +250,17 @@
 
  - 5、微应用打包之后 css 中的字体文件和图片加载 404 --建议查看https://qiankun.umijs.org/zh/faq#%E5%BE%AE%E5%BA%94%E7%94%A8%E6%89%93%E5%8C%85%E4%B9%8B%E5%90%8E-css-%E4%B8%AD%E7%9A%84%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6%E5%92%8C%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD-404
 
- - 6、qiankun 将会自动隔离微应用之间的样式（开启沙箱的情况下）,start方法中会有对应的参数设置  
+ - 6、qiankun 将会自动隔离微应用之间的样式（开启沙箱的情况下）,start方法中会有对应的参数设置
  ---
- 
+
  ### 最后的最后
-> [https://github.com/aehyok/vue-qiankun](https://github.com/aehyok/vue-qiankun) 
+> [https://github.com/aehyok/vue-qiankun](https://github.com/aehyok/vue-qiankun)
   本文中不涉及到代码，有关代码问题可以访问文章开头的微前端github demo 仓库，github仓库将会保持持续更新，不断优化小demo。
 
-> [https://github.com/aehyok/vue3-ele-form](https://github.com/aehyok/vue3-ele-form)  
+> [https://github.com/aehyok/vue3-ele-form](https://github.com/aehyok/vue3-ele-form)
    同时对json数据配置生成动态form表单和table列表也会持续优化，目前刚刚在公司项目中尝试，等机会合适可能就让同事一起参与进来。
 
-> [https://github.com/aehyok/2021](https://github.com/aehyok/2021) 
+> [https://github.com/aehyok/2021](https://github.com/aehyok/2021)
    最后自己每天工作中的笔记记录仓库，主要以文章链接和问题处理方案为主。
 
-    
+
