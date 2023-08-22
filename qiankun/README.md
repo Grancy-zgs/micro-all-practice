@@ -9,8 +9,8 @@
     ├── main-vite-app-ts/      # 存放主应用 main-vite-app-ts 的文件夹
     |── webpack-app/           # 存放微应用 webpack-app 的文件夹
     |── map-app/               # 存放微应用 map-app 的文件夹
-    |—— test-vite-app-ts       # 存放vite微应用 使用vite-plugin-legacy-qiankun插件 资源加载有问题 还不能显示页面
-    |—— vite-test-plugin       # 存放vite微应用 使用vite-plugin-qiankun插件(比较主流 但未解决css沙箱和js沙箱问题) 已经可以显示页面了 但页面大小有些问题
+    |—— test-vite-app-ts       # 存放vite微应用 使用vite-plugin-legacy-qiankun插件 资源加载有问题 还不能显示页面 该插件使用人数较少 使用方法不是很详细 但解决了css和js沙箱的问题
+    |—— vite-test-plugin       # 存放vite微应用 使用vite-plugin-qiankun插件(比较主流 但未解决css沙箱和js沙箱问题) 已经可以显示页面了 但页面样式有些问题
     |—— docs                   # 文档
       |—— qiankun.conf           # 项目部署的nginx基础配置文件
       |—— build.sh               # 通过脚本对主应用和子应用进行统一的打包
